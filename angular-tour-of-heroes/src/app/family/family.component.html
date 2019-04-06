@@ -1,0 +1,10 @@
+<div *ngIf="selectedMember">
+
+  <label>name</label>
+  <input [(ngModel)]="selectedMember.name" type="text"/><br>
+  <label>age</label>
+  <input [(ngModel)]="selectedMember.age" type="text"/>
+  </div>
+<ul>
+  <li *ngFor="let member of members" (click)="onSelect(member)" class="memberClass">{{member.name}}</li>
+  </ul>

@@ -1,0 +1,23 @@
+
+<div *ngIf = "!selectedPlayer">
+  <ul>
+   <li *ngFor = "let p of players" (click) = "onSelect(p)">{{p.name}}</li>
+  </ul>
+</div>
+<div *ngIf = "selectedPlayer">
+  <p>Batting Details</p>
+  <div *ngIf = "selectedPlayer">
+    <label>name</label>
+    <input [(ngModel)] = "selectedPlayer.name" type="text"><br>
+    <label>id</label>
+    <input [(ngModel)] = "selectedPlayer.id" type="text"><br>
+    <label>runs</label>
+    <input [(ngModel)] = "selectedPlayer.runs" type="text"><br>
+  </div>
+  <div *ngIf = selectedPlayer.isBowler>
+    <p>bowliung details</p>
+    <label>wickets</label>
+    <input [(ngModel)] = "selectedPlayer.wickets" type="text"><br>
+   </div> 
+  <button class="button" (click) = "selectedPlayer=null">Back</button>
+</div>
