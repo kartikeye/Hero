@@ -6,7 +6,8 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { FormsModule } from '@angular/forms';
 import { FamilyComponent } from './family/family.component';
 import { BatsmanComponent } from './batsman/batsman.component';
-import { PlayerComponent } from './player/player.component'; // <-- NgModel lives here
+import { PlayerComponent } from './player/player.component';
+import { HeaderComponent } from './header/header.component'; // <-- NgModel lives here
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { PlayerComponent } from './player/player.component'; // <-- NgModel live
     HeroesComponent,
     FamilyComponent,
     BatsmanComponent,
-    PlayerComponent
+    PlayerComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
